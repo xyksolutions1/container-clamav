@@ -5,16 +5,16 @@
 ARG \
     BASE_IMAGE
 
-FROM ${BASE_IMAGE}
+FROM docker.io/xyksolutions1/container-base:main
 
 LABEL \
         org.opencontainers.image.title="ClamAV" \
         org.opencontainers.image.description="Antivirus Scanner" \
-        org.opencontainers.image.url="https://hub.docker.com/r/nfrastack/clamav" \
-        org.opencontainers.image.documentation="https://github.com/nfrastack/container-clamav/blob/main/README.md" \
-        org.opencontainers.image.source="https://github.com/nfrastack/container-clamav.git" \
-        org.opencontainers.image.authors="Nfrastack <code@nfrastack.com>" \
-        org.opencontainers.image.vendor="Nfrastack <https://www.nfrastack.com>" \
+        org.opencontainers.image.url="https://hub.docker.com/r/xyksolutions1/clamav" \
+        org.opencontainers.image.documentation="https://github.com/xyksolutions1/container-clamav/blob/main/README.md" \
+        org.opencontainers.image.source="https://github.com/xyksolutions1/container-clamav.git" \
+        org.opencontainers.image.authors="xyksolutions1" \
+        org.opencontainers.image.vendor="xyksolutions1" \
         org.opencontainers.image.licenses="MIT"
 
 ARG     \
@@ -27,8 +27,8 @@ COPY README.md /usr/src/container/README.md
 
 ENV \
     CONTAINER_ENABLE_SCHEDULING=TRUE \
-    IMAGE_NAME="nfrastack/clamav" \
-    IMAGE_REPO_URL="https://github.com/nfrastack/container-clamav/"
+    IMAGE_NAME="xyksolutions1/clamav" \
+    IMAGE_REPO_URL="https://github.com/xyksolutions1/container-clamav/"
 
 EXPOSE 3310
 
